@@ -3,6 +3,22 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{mikaeili2023sked,
+      title={SKED: Sketch-guided Text-based 3D Editing}, 
+      author={Aryan Mikaeili and Or Perel and Daniel Cohen-Or and Ali Mahdavi-Amiri},
+      journal={arxiv},       
+      year={2023},
+      eprint={2303.10735},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV},
+      url={https://arxiv.org/abs/2303.10735},
+      pdf={https://arxiv.org/abs/2303.10735.pdf},
+      abstract={Text-to-image diffusion models are gradually introduced into computer graphics, recently enabling the development of Text-to-3D pipelines in an open domain. However, for interactive editing purposes, local manipulations of content through a simplistic textual interface can be arduous. Incorporating user guided sketches with Text-to-image pipelines offers users more intuitive control. Still, as state-of-the-art Text-to-3D pipelines rely on optimizing Neural Radiance Fields (NeRF) through gradients from arbitrary rendering views, conditioning on sketches is not straightforward. In this paper, we present SKED, a technique for editing 3D shapes represented by NeRFs. Our technique utilizes as few as two guiding sketches from different views to alter an existing neural field. The edited region respects the prompt semantics through a pre-trained diffusion model. To ensure the generated output adheres to the provided sketches, we propose novel loss functions to generate the desired edits while preserving the density and radiance of the base instance. We demonstrate the effectiveness of our proposed method through several qualitative and quantitative experiments.},
+      img={sked.png},
+      website={https://sked-paper.github.io/},
+      selected={true}
+}
+
 @article{hertz2022spaghetti, 
          title={SPAGHETTI: Editing Implicit Shapes Through Part Aware Generation}, 
          author={Hertz, Amir and Perel, Or and Giryes, Raja and Sorkine-Hornung, Olga and Cohen-Or, Daniel}, 
@@ -19,6 +35,24 @@
 }
 
 @article{hertz2021meshdrape,
+  author = {Hertz, A. and Perel, O. and Giryes, R. and Sorkine-Hornung, O. and Cohen-Or, D.},
+  title = {Mesh Draping: Parametrization-Free Neural Mesh Transfer},
+  journal = {Computer Graphics Forum},
+  volume = {42},
+  number = {1},
+  pages = {72-85},
+  keywords = {shape synthesis, shape modelling, neural networks},
+  doi = {https://doi.org/10.1111/cgf.14721},
+  url = {https://onlinelibrary.wiley.com/doi/abs/10.1111/cgf.14721},
+  eprint = {https://onlinelibrary.wiley.com/doi/pdf/10.1111/cgf.14721},
+  pdf={https://arxiv.org/abs/2110.05433.pdf},
+  abstract = {Despite recent advances in geometric modelling, 3D mesh modelling still involves a considerable amount of manual labour by experts. In this paper, we introduce Mesh Draping: a neural method for transferring existing mesh structure from one shape to another. The method drapes the source mesh over the target geometry and at the same time seeks to preserve the carefully designed characteristics of the source mesh. At its core, our method deforms the source mesh using progressive positional encoding (PE). We show that by leveraging gradually increasing frequencies to guide the neural optimization, we are able to achieve stable and high-quality mesh transfer. Our approach is simple and requires little user guidance, compared to contemporary surface mapping techniques which rely on parametrization or careful manual tuning. Most importantly, Mesh Draping is a parameterization-free method, and thus applicable to a variety of target shape representations, including point clouds, polygon soups and non-manifold meshes. We demonstrate that the transferred meshing remains faithful to the source mesh design characteristics, and at the same time fits the target geometry well.},
+  year = {2023},
+  img={meshdrape.jpg},
+  selected={true}
+}
+
+@article{hertz2021meshdrape,
       title={Mesh Draping: Parametrization-Free Neural Mesh Transfer}, 
       author={Amir Hertz and Or Perel and Raja Giryes and Olga Sorkine-Hornung and Daniel Cohen-Or},
       journal={arxiv},
@@ -29,7 +63,7 @@
       pdf={https://arxiv.org/abs/2110.05433.pdf},
       abstract={Despite recent advances in geometric modeling, 3D mesh modeling still involves a considerable amount of manual labor by experts. In this paper, we introduce Mesh Draping: a neural method for transferring existing mesh structure from one shape to another. The method drapes the source mesh over the target geometry and at the same time seeks to preserve the carefully designed characteristics of the source mesh. At its core, our method deforms the source mesh using progressive positional encoding. We show that by leveraging gradually increasing frequencies to guide the neural optimization, we are able to achieve stable and high quality mesh transfer. Our approach is simple and requires little user guidance, compared to contemporary surface mapping techniques which rely on parametrization or careful manual tuning. Most importantly, Mesh Draping is a parameterization-free method, and thus applicable to a variety of target shape representations, including point clouds, polygon soups, and non-manifold meshes. We demonstrate that the transferred meshing remains faithful to the source mesh design characteristics, and at the same time fits the target geometry well.},
       img={meshdrape.jpg},
-      selected={true}
+      selected={false}
 }
 
 @article{hertz2021sape,
