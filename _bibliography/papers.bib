@@ -3,6 +3,65 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{perel2026tron,
+  title   = {TRON: Tracing Rays to Orchestrate a Neural Renderer for 3D Gaussian Reconstructions},
+  author  = {Perel, Or and Abu Alhaija, Hassan and Wang, Zian and Munkberg, Jacob and Atzmon, Matan and Fidler, Sanja and Shugrina, Masha},
+  journal = {arXiv preprint arXiv:2606.11314},
+  year    = {2026},
+  url={http://arxiv.org/abs/2606.11314}, 
+  pdf={http://arxiv.org/abs/2606.11314.pdf},
+  abstract={We introduce TRON, a rendering framework that combines 3D Gaussian ray tracing with neural rendering to enable realistic and controllable rendering of real-world 3D scenes under novel lighting, dynamic object motion, object insertion, and material editing. Prior approaches that rely solely on physically based rendering (PBR) of Gaussian representations struggle to achieve realistic relighting due to imperfections in reconstructed geometry, material estimates, and light transport estimation. At the same time, neural rendering methods often lack an explicit scene representation, limiting their ability to support interactive editing with fine-grained manipulation. TRON bridges these two paradigms. We use intrinsic decomposition priors from a learned inverse rendering model to regularize the material properties of a Gaussian field, and repurpose a ray tracer to provide radiometric guidance rather than final pixels. By treating this output as a structured 3D scaffold, we empower a lightweight neural renderer to bridge the domain gap between shading-model constrained estimates and photorealistic output. Our key insight is that the combination of explicit 3D knowledge with robust material priors provides speed and controllability, while neural rendering enables the synthesis of photorealistic images. To support real-world scenarios, we train our neural renderer with a multi-stage strategy consisting of large-scale pretraining and targeted fine-tuning on a newly constructed dataset of 2.1M rendered synthetic and real-world frames from 3D reconstructions. TRON outperforms Gaussian-based relighting methods in realism, and prior neural renderers in editability and speed. To the best of our knowledge, TRON is the first method to enable practical interactive applications in captured 3D environments, offering realistic appearance under dynamic geometric, lighting and material conditions.},
+  img={tron.gif},
+  website={https://research.nvidia.com/labs/sil/projects/tron/},
+  selected={true}
+}
+
+@article{fujitsang2026artisangs,
+    title = {ArtisanGS: Interactive Tools for Gaussian Splat Selection with AI and Human in the Loop},
+    author = {Clement {Fuji Tsang} and
+              Anita {Hu} and
+              Or {Perel} and
+              Carsten {Kolve} and
+              Maria Shugrina},
+    journal={arXiv preprint arXiv:2602.10173},
+    year={2026},
+    url={https://arxiv.org/abs/2602.10173}, 
+    pdf={https://arxiv.org/abs/2602.10173.pdf},
+    abstract={Representation in the family of 3D Gaussian Splats (3DGS) are growing into a viable alternative to traditional graphics for an expanding number of application, including recent techniques that facilitate physics simulation and animation. However, extracting usable objects from in-the-wild captures remains challenging and controllable editing techniques for this representation are limited. Unlike the bulk of emerging techniques, focused on automatic solutions or high-level editing, we introduce an interactive suite of tools centered around versatile Gaussian Splat selection and segmentation. We propose a fast AI-driven method to propagate user-guided 2D selection masks to 3DGS selections. This technique allows for user intervention in the case of errors and is further coupled with flexible manual selection and segmentation tools. These allow a user to achieve virtually any binary segmentation of an unstructured 3DGS scene. We evaluate our toolset against the state-of-the-art for Gaussian Splat selection and demonstrate their utility for downstream applications by developing a user-guided local editing approach, leveraging a custom Video Diffusion Model. With flexible selection tools, users have direct control over the areas that the AI can modify. Our selection and editing tools can be used for any in-the-wild capture without additional optimization.},
+    img={artisangs.gif},
+    website={https://research.nvidia.com/labs/sil/projects/ArtisanGS/},
+    selected={true}
+}
+
+@article{bekor2025gaussian,
+    title={Gaussian See, Gaussian Do: Semantic 3D Motion Transfer from Multiview Video},
+    author={Bekor, Yarin and Harari, Gal Michael and Perel, Or and Litany, Or},
+    journal={arXiv preprint arXiv:2511.14848},
+    year={2025},
+    url={https://arxiv.org/abs/2511.14848}, 
+    pdf={https://arxiv.org/abs/2511.14848.pdf},
+    abstract={We present Gaussian See, Gaussian Do, a novel approach for semantic 3D motion transfer from multiview video. Our method enables rig-free, cross-category motion transfer between objects with semantically meaningful correspondence. Building on implicit motion transfer techniques, we extract motion embeddings from source videos via condition inversion, apply them to rendered frames of static target shapes, and use the resulting videos to supervise dynamic 3D Gaussian Splatting reconstruction. Our approach introduces an anchor-based view-aware motion embedding mechanism, ensuring cross-view consistency and accelerating convergence, along with a robust 4D reconstruction pipeline that consolidates noisy supervision videos. We establish the first benchmark for semantic 3D motion transfer and demonstrate superior motion fidelity and structural consistency compared to adapted baselines.},
+    img={gaussian_see_gaussian_do.gif},
+    website={https://gsgd-motiontransfer.github.io/},
+    code={https://github.com/GSGD-MotionTransfer/GSGD},
+    selected={true}
+}
+
+@article{pandey2025painting,
+  author    = {Pandey, Karran and Hu, Anita and Fuji-Tsang, Clement and Perel, Or and Singh, Karan and Shugrina, Maria},
+  title     = {Painting with 3D Gaussian Splat Brushes},
+  booktitle   = {ACM SIGGRAPH 2025 Conference Papers},
+  pages = {},
+  year      = {2025},
+  url={https://dl.acm.org/doi/full/10.1145/3721238.3730724}, 
+  pdf={https://splatpainting.github.io/static/assets/paper.pdf},
+  abstract={We explore interactive painting on 3D Gaussian splat scenes and other surfaces using 3D Gaussian splat brushes, each containing a chunk of realistic texture-geometry that make capture representations so appealing. The suite of brush capabilities we propose enables 3D artists to capture and then remix real world imagery and geometry with direct interactive control. In particular, we propose a set of algorithms for 1) selecting subsets of Gaussians as a brush pattern interactively, 2) applying the brush interactively to the same or other 3DGS scenes or other 3D surfaces using stamp-based painting, 3) using an inpainting Diffusion Model to adjust stamp seams for seamless and realistic appearance. We also present an ensemble of artistic brush parameters, resulting in a wide range of appearance options for the same brush. Our contribution is a judicious combination of algorithms, design features and creative affordances, that together enable the first prototype implementation of interactive brush-based painting with 3D Gaussian splats. We evaluate our system by showing compelling results on a diverse set of 3D scenes; and a user study with VFX/animation professionals, to validate system features, workflow, and potential for creative impact.},
+  img={painting_3dgs_brushes.png},
+  website={https://splatpainting.github.io/},
+  code={https://github.com/nv-tlabs/SplatPainting},
+  selected={true}
+}
+
 @article{moenneloccoz20243dgaussianraytracing,
     title={3D Gaussian Ray Tracing: Fast Tracing of Particle Scenes}, 
     author={Nicolas Moenne-Loccoz and Ashkan Mirzaei and Or Perel and Riccardo de Lutio and Janick Martinez Esturo and Gavriel State and Sanja Fidler and Nicholas Sharp and Zan Gojcic},
